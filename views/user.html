@@ -1,0 +1,31 @@
+<div class="container col-lg-12 col-md-12 col-xs-12" ng-controller="userProfile as profile">
+  <div id="sideTab" class="col-lg-3 col-md-3 col-xs-12 text-center long" style="height:100%; border-right:solid 2px #95a5a6; overflow:hidden;">
+    <div class="col-lg-4 col-md-4 pull-right">
+      <div class="" id="tabControl"><p class="fa fa-arrow-left pull-right"></p></div>
+    </div>
+    <div class="col-lg-12 col-md-12 text-center">
+      <img src="https://www.gravatar.com/avatar/?s=60" />
+    </div>
+    <div class="col-lg-12 col-md-12 text-center">
+      <p>{{profile.data.first_name}}</p>
+      <p>{{profile.data.last_name}}</p>
+      <p>{{profile.data.id}}</p>
+    </div>
+  </div>
+  <div class="col-lg-9 col-md-9 col-xs-12 text-center long" style="height:100%;">
+    <div class="row" style="background:#bdc3c7; height:10%;">
+      <!-- Here the user would have a data property for their banner-->
+        <div class="col-lg-4 col-md-4 hidden-xs text-center" style="height:100%; text-align: center;vertical-align: middle;line-height: 55px;border-right:solid 1px #95a5a6;">
+              <strong><a ui-sref=".settings" style="cursor:default; text-decoration:none;">Settings</a></strong>
+        </div>
+        <div class="col-lg-4 col-md-4 hidden-xs text-center" style="height:100%; text-align: center;vertical-align: middle;line-height: 55px;border-right:solid 1px #95a5a6;border-left:solid 1px #95a5a6;">
+              <b><a ui-sref=".map" style="cursor:default">Map</a></b>
+        </div>
+        <div class="col-lg-4 col-md-4 hidden-xs text-center" style="height:100%; text-align: center;vertical-align: middle;line-height: 55px; border-left:solid 1px #95a5a6;">
+              <b><a ui-sref=".help" style="cursor:default">Help</a></b>
+        </div>
+
+    </div>
+    <div style="height:90%;" class="row-fluid" ui-view></div>
+  </div>
+</div>
